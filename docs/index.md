@@ -4,11 +4,11 @@
 
 ## Variablen und Datentypen
 
-Eine Variable ist in jeder Programmiersprache einfach ein Behälter, der gewisse Werte speichern kann (z.B.: Text, ganze Zahlen, Zahlen mit Komma). Eine Variable besitzt einen Namen, einen Datentyp und einen Wert. 
+Eine Variable ist in jeder Programmiersprache einfach ein Behälter, der gewisse Werte speichern kann (z.B.: Text, ganze Zahlen, Zahlen mit Komma). Eine Variable besitzt einen **Namen**, einen **Datentyp** und einen **Wert**. 
 
 ### Name
 
-Der Name einer Variable ist frei wählbar. Allerdings sollte man sich angewöhnen, dass man keine Umlaute verwendet und auch mit Sonderzeichen eher sparsamer umgeht.
+Der Name einer Variable ist **frei wählbar**. Allerdings sollte man sich angewöhnen, dass man keine Umlaute verwendet und auch mit Sonderzeichen eher sparsamer umgeht.
 
 ### Datentyp
 
@@ -17,10 +17,10 @@ Man muss dem Computer sagen, welche Art von Daten wir gerne speichern würden. D
 Muss er eine "+" Operation mit zwei Zahlen durchführen werden diese addiert, allerdings wird eine "+" Operation auf zwei Texte angewand, so werden diese beiden Texte einfach aneinandergehängt.
 
 Wir beschäftigen uns hauptsächlich mit folgendn Datentypen:
-* string : Text
-* integer : ganze Zahlen
-* float : Kommazahlen
-* bool : kann nur zwei Werte (Richtig / Falsch) annehmen
+* **string** : Text
+* **integer** : ganze Zahlen
+* **float** : Kommazahlen
+* **bool** : kann nur zwei Werte (Richtig / Falsch) annehmen
 
 ### Wert
 
@@ -40,7 +40,18 @@ kommazahl = 3.11    # Name: kommazahl, Datentyp: float, Wert: 3.11
 c1 = "Hallo Welt"   # Name: c1, Datentyp: string, Wert: "Hallo Welt"
 ```
 
+### Beispiele:
+
+* [01HelloWorld.py](/beispiele/01HelloWorld.py)
+
 
 ## Einlesen und Ausgabe
+Um in Python etwas auf die Console zu schreiben muss die Funktino **print** verwendet werden.
+
+Dieser Code gibt auf der Console "Hallo Welt" aus.
+
+```python
+print("Hallo Welt")
+```
 
 ## IF-Anweisung
