@@ -2,15 +2,15 @@ theme: jekyll-theme-cayman
 
 # Site wide configuration
 
-title: Academic Website of Ted Laderas
-locale: en_US
+title: Pythonkurs 5. Klasse
+locale: de_AT
 logo: # filename of a logo image that has been placed into your images directory
 
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
   name: Benedikt neuhold
   avatar: 
-  bio: "This is a sample Jekyll academic website."
+  bio: "Python Kurs für die 5. Klasse"
   email: benedikt.neuhold@gym-hartberg.ac.at
   # Do not include the @ symbol in your Twitter username
   twitter: benschi11

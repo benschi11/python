@@ -42,7 +42,7 @@ c1 = "Hallo Welt"   # Name: c1, Datentyp: string, Wert: "Hallo Welt"
 
 ### Beispiele:
 
-* [01HelloWorld.py](/beispiele/01HelloWorld.py)
+* <a href="https://github.com/benschi11/python-5/blob/master/beispiele/01HelloWorld.py">01HelloWorld.py</a>
 
 
 ## Einlesen und Ausgabe
@@ -52,6 +52,11 @@ Dieser Code gibt auf der Console "Hallo Welt" aus.
 
 ```python
 print("Hallo Welt")
+```
+
+Um etwas vom Benutzer einzulesen bzw. abzufragen, muss die Funktion **input** verwendet werden. Diese Funktion gibt die Eingabe des Benutzers zurück. Wichtig ist hierbei, dass der zurückgegebenen Wert immer als **string** zurückgegeben werden - unabhängig davon was eingegeben wird.
+
+```python
 ```
 
 ## IF-Anweisung
