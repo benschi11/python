@@ -26,6 +26,21 @@ Wir beschäftigen uns hauptsächlich mit folgendn Datentypen:
 
 Als Wert der Variable bezeichnet man den aktuellen Wert (=Inhalt) den diese Variable gerade bestitzt.
 
+Um eine Variable mit dem Namen 'zahl', dem Datentyp integer und dem Wert 3 anzulegen muss man folgenden Python Code schreiben:
+
+```python
+zahl = 3
+```
+
+Hier noch einige andere Variablen mit dazugehörigen Namen, Datentyp und Wert als Kommentar
+
+```python
+a1 = 7              # Name: a1, Datentyp: integer, Wert: 7
+kommazahl = 3.11    # Name: kommazahl, Datentyp: float, Wert: 3.11
+c1 = "Hallo Welt"   # Name: c1, Datentyp: string, Wert: "Hallo Welt"
+```
+
+
 ## Einlesen und Ausgabe
 
 ## IF-Anweisung
