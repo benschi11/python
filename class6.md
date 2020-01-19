@@ -25,7 +25,7 @@ students_file.close()
 
 Wichtig ist es auch, am Ende des Lesevorgangs die Datei wieder zu schließen. Dies ist mit `.close()` direkt auf das Dateiobjekt möglich.
 
-[ ]Beispiele aus dem Unterricht hinzufügen 
+- [ ]Beispiele aus dem Unterricht hinzufügen 
 
 ### Schreiben in eine Datei
 
@@ -40,7 +40,6 @@ Mode | Beschreibung
 `'x'`| Öffnet eine Datei für exklusive Erstellung, d.h. wenn die Datei bereits existiert wird ein Fehler ausgegben
 `'a'`| Öffnet die Datei im Hinzufügemodus. D.h. die Inhalte werden zur bestehenden Datei hinzufügt. Ist die Datei nicht vorhanden, wird sie erstellt.
 
-
 Der nachfolgende Code schreibt in die Datei einfach die Zahlen von 1 bis 10.
 
 ```python
@@ -49,7 +48,8 @@ for i in range(1,11):
     datei.write(str(i) + "\n")
 datei.close()
 ```
-[ ]Beispiele aus dem Unterricht hinzufügen 
+
+- [ ]Beispiele aus dem Unterricht hinzufügen 
 
 ### Gesamten Inhalt auf einmal lesen
 Es ist auch möglich den gesamten Inhalt einer Datei mit einem Befehl in eine Liste einzulesen. Dies wird durch ausführen des `.readlines()` Befehls auf das geöffnete Dateiobjekt erreicht.
@@ -59,4 +59,4 @@ Dieser Code speichert den gesamten Inhalt der Datei `6a.txt` in der Liste `stude
 students = open("6a.txt").readlines()
 ```
 
-[ ]Beispiele aus dem Unterricht hinzufügen 
+- [ ]Beispiele aus dem Unterricht hinzufügen 
