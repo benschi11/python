@@ -2,8 +2,6 @@
 
 ## Einführung
 
-
-
 ## Variablen und Datentypen
 
 Eine Variable ist in jeder Programmiersprache einfach ein Behälter, der gewisse Werte speichern kann (z.B.: Text, ganze Zahlen, Zahlen mit Komma). Eine Variable besitzt einen **Namen**, einen **Datentyp** und einen **Wert**. 

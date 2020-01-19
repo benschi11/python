@@ -2,7 +2,7 @@ theme: jekyll-theme-cayman
 
 # Site wide configuration
 
-title: Pythonkurs 5. Klasse
+title: Pythonkurs
 locale: de_AT
 logo: # filename of a logo image that has been placed into your images directory
 
@@ -10,7 +10,7 @@ logo: # filename of a logo image that has been placed into your images directory
 owner:
   name: Benedikt neuhold
   avatar: 
-  bio: "Python Kurs für die 5. Klasse"
+  bio: "Python Kurs für das Gymnasium Hartberg"
   email: benedikt.neuhold@gym-hartberg.ac.at
   # Do not include the @ symbol in your Twitter username
   twitter: benschi11
