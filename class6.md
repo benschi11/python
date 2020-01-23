@@ -25,7 +25,6 @@ students_file.close()
 
 Wichtig ist es auch, am Ende des Lesevorgangs die Datei wieder zu schließen. Dies ist mit `.close()` direkt auf das Dateiobjekt möglich.
 
-- [ ] Beispiele aus dem Unterricht hinzufügen 
 
 ### Schreiben in eine Datei
 
@@ -49,8 +48,6 @@ for i in range(1,11):
 datei.close()
 ```
 
-- [ ] Beispiele aus dem Unterricht hinzufügen 
-
 ### Gesamten Inhalt auf einmal lesen
 Es ist auch möglich den gesamten Inhalt einer Datei mit einem Befehl in eine Liste einzulesen. Dies wird durch ausführen des `.readlines()` Befehls auf das geöffnete Dateiobjekt erreicht.
 
@@ -59,4 +56,24 @@ Dieser Code speichert den gesamten Inhalt der Datei `6a.txt` in der Liste `stude
 students = open("6a.txt").readlines()
 ```
 
-- [ ] Beispiele aus dem Unterricht hinzufügen 
+### Beispiele
+
+## Aufbau einer Datei
+Um Inhalte aus einer Datei zu lesen oder in eine Datei zu speichern ist es sinnvoll, sich eine gute Datenstruktur zu überlegen. Die dafür sehr häufige Struktur ist das csv-Schema. Hierbei wird für jeden Datensatz eine eigene Zeile angelegt und innerhalb des Datensatzes wird per ";" oder "," getrennt.
+
+```
+Nachname;Vorname;Alter
+Neuhold;Benedikt;32
+Maier;Sepp;45
+Huber;Walter;28
+```
+
+Diese Struktur muss mit Python nach dem Einlesen noch in die Einzelteile zerlegt werden. Dies ist über die Funktion `split()` möglich. Diese Funktion teilt einen String nach einem vorgegebenen Trennzeichen auf und gibt jeden Eintrag in einer Liste zurück.
+
+```python
+zeile = "Neuhold;Benedikt;Alter"
+nb = zeile.split(";")
+print(nb)
+```
+Dieser Sourcecode teilt den String `zeile` nach jedem `;` auf und speichert den Eintrag in eine Liste. Dann wird diese Liste in `nb` gespeichert und ausgegeben. Ausgabe: `['Neuhold', 'Benedikt', 'Alter']`
+
