@@ -90,7 +90,7 @@ if <Überprüfung> :
   <Code wenn Überprüfung korrekt>
 ```
 
-Sollte es sich um eine "Wenn - dann - ansonsten" - Entscheidung handeln, kann die `if-Anweisung` noch um einen `else`-Ast ersetzt werden.
+Sollte es sich um eine "Wenn - dann - ansonsten" - Entscheidung handeln, kann die `if-Anweisung` noch um einen `else`-Ast erweitert werden.
 ```python
 if <Überprüfung> :
   <Code wenn Überprüfung korrekt>
