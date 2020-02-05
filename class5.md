@@ -78,8 +78,32 @@ eingabe = int(input("Bitte geben Sie Ihr Alter ein:"))
 Weitere Konvertierungsmöglichkeiten sind folgende:
 
 ```python
-kommazahl = float(input("Bitte geben Sie Ihre Größe in m ein:"))
-summe = str(243.4)
+kommazahl = float(input("Bitte geben Sie Ihre Größe in m ein:")) # konvertiert die Eingabe in eine Dezimalzahl
+summe = str(243.4) # konvertiert den float-Wert 243.4 in einen Text
 ```
 
 ## IF-Anweisung
+In der Softwareentwicklung muss oft etwas überprüft werden. Dies geschieht in allen Programmiersprachen mit der `if-Anweisung`. 
+Diese hat immer folgende Syntax:
+```python
+if <Überprüfung> :
+  <Code wenn Überprüfung korrekt>
+```
+
+Sollte es sich um eine "Wenn - dann - ansonsten" - Entscheidung handeln, kann die `if-Anweisung` noch um einen `else`-Ast ersetzt werden.
+```python
+if <Überprüfung> :
+  <Code wenn Überprüfung korrekt>
+else:
+  <Code wenn Überprüfung NICHT korrekt>
+```
+
+Sollten mehr als zwei Möglichkeiten vorhanden sein, gibt es auch die Möglichkeit von `elif` (else - if).
+```python
+if <Überprüfung 1> :
+  <Code wenn Überprüfung 1 korrekt>
+elif <Überprüfung 2>:
+  <Code wenn Überprüfung 2 korrekt>
+else:
+  <Code wenn Überprüfung 1 und Überprüfung 2 NICHT korrekt>
+```
