@@ -107,3 +107,9 @@ elif <Überprüfung 2>:
 else:
   <Code wenn Überprüfung 1 und Überprüfung 2 NICHT korrekt>
 ```
+
+## Schleifen
+TODO
+
+## Arrays
+TODO
