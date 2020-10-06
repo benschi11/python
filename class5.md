@@ -8,7 +8,7 @@ Eine Variable ist in jeder Programmiersprache einfach ein Behälter, der gewisse
 
 ### Name
 
-Der Name einer Variable ist **frei wählbar**. Allerdings sollte man sich angewöhnen, dass man keine Umlaute verwendet und auch mit Sonderzeichen eher sparsamer umgeht.
+Der Name einer Variable ist **frei wählbar**. Allerdings sollte man sich angewöhnen, dass man keine Umlaute verwendet und auch mit Sonderzeichen eher sparsam umgeht.
 
 ### Datentyp
 
