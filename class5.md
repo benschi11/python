@@ -108,8 +108,70 @@ else:
   <Code wenn Überprüfung 1 und Überprüfung 2 NICHT korrekt>
 ```
 
-## Schleifen
-TODO
+## Liste (Arrays)
+Eine Liste ist in der Programmierung eine Variable, in der mehrere Werte seperiert voneinander gespeichert werden können.
+Zum Beispiel kann ich eine Variable ```Obst``` erzeugen, die alle Obstsorten gespeichert hat, die ich gerade zuhause habe.
+####Syntax
+```python
+obst = ["Orange", "Apfel", "Kiwi"]
+```
+In diesem Fall werden in der Variable ```obst``` 3 Werte gespeichert - Orange, Apfel und Kiwi. Um auf die einzelnen Werte dieser Liste zuzugreifen muss die eckige Klammer (*STRG + SHIFT + 8* **ODER** ALT GR + 8 ) verwendent werden. In der Klammer wird der sogenannte "Index" angegeben --> **Wichtig:** Der Index startet beim ersten Element der Liste immer mit 0.
+```python
+print(obst[0])
+```
+*Ausgabe:*
+```
+Orange
+```
 
-## Arrays
-TODO
+
+## Schleifen
+Wenn man als Programmierer gewisse Dinge öfter wiederholen möchte oder immer das Gleiche mit unterschiedlichen Dingen machen möchte, dann benötigt man Schleifen.
+In Python gibt es zwei Schleifen - die for-Schleife und die while-Schleife.
+
+### for-Schleife
+Die for-Schleife in Python benötigt eine Liste. Für jeden Eintrag der Liste wird ein Schleifendurchgang durchgeführt.
+
+```python
+for <Variable> in <Liste>:
+  <Schleifendurchgang>
+```
+
+#####Beispiel Obstsalat:
+```python
+obstsalat = ["Apfel", "Banane", "Kiwi", "Ananas"]
+for obst in obstsalat:
+  print("Schneide " + obst)
+```
+*Ausgabe:*
+```
+Schneide Apfel
+Schneide Banane
+Schneide Kiwi
+Schneide Ananas
+```
+
+Da wir sehr oft in der Programmierung ein Schleife von 1 bis x laufen lassen müssen gibt es hierfür in Python einen Befehl um eine Liste von 1 bis x zu generieren. Dieser Befehl nennt sich ```range(1,x)``` und hat eine bestimmte Eigenheit --> er generiert eine Liste von 1 bis x-1, d.h. die letzte Zahl selber ist nicht mehr in der Liste dabei.
+```python
+a = list(range(1,4)) # generiert eine Liste von 1 bis 3 => a=[1,2,3]
+b = list(range(1,10)) # generiert eine Liste von 1 bis 9
+c = list(range(1,101)) # generiert eine Liste von 1 bis 100
+```
+
+#####Beispiel Zählen:
+
+```python
+count = 0
+for i in range(1,51):
+  count = count + 1
+
+print(count)
+```
+*Ausgabe:*
+```
+50
+```
+
+### while-Schleife
+
+
