@@ -132,6 +132,7 @@ In Python gibt es zwei Schleifen - die for-Schleife und die while-Schleife.
 ### for-Schleife
 Die for-Schleife in Python benötigt eine Liste. Für jeden Eintrag der Liste wird ein Schleifendurchgang durchgeführt.
 
+#### Syntax
 ```python
 for <Variable> in <Liste>:
   <Schleifendurchgang>
@@ -174,4 +175,30 @@ print(count)
 
 ### while-Schleife
 
+Oftmals kommt es beim Programmieren auch vor, dass ich von Beginn an nicht weiß, wie oft meine Schleife laufen muss - sondern ich möchte, dass sie so lange läuft, so lange eine Bedingung erfüllt ist. Diese Ausgangslage kann mit der for-Schleife nur sehr schwer umgesetzt werden, daher gibt es eine weitere Schleife - die while-Schleife.
 
+#### Syntax
+```python
+while <Bedingung>:
+  <Schleifendurchgang>
+```
+
+Ein sehr häufiges Beispiel ist, dass der Benutzer so lange nach einer Eingabe gefragt wird, bis er sie richtig eingibt.
+
+```Python
+eingabe = input("Bitte geben Sie 'J' ein:")
+while eingabe != "J":
+  eingabe = input("Bitte geben Sie 'J' ein:")
+```
+Diese Schleife wird also so lange ausgeführt, so lange die Bedingung ```eingabe != "J"``` erfüllt ist, also in der Variable ```eingabe``` nicht "J" steht.
+
+Viele Programmiere mögen es nicht, dass im obrigen Beispiel die Zeile 1 und 3 doppelt geschrieben werden müssen. Daher arbeiten viele mit Hilfe eines Tricks: Sie erzeugen eine Endlosschleife und prüfen in jedem Schleifendurchgang händisch ob die Bedingung nicht mehr erfüllt ist - sollte dies der Fall sein wird die Schleife mit `break` verlassen.
+
+```python
+for True: # Endlosschleife
+  eingabe = input("Bitte geben Sie ein 'J' ein:")
+  if eingabe == "J":
+    break #verlasse die Schleife
+```
+
+Du kannst gerne beide Arten verwenden - je nach dem welche dir besser gefällt.
