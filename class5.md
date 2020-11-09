@@ -1,5 +1,17 @@
 # Python Kurs - 5. Klasse
 
+## Inhaltsverzeichnis
+
+* [Einführung](#einführung)
+* [Variablen und Datentypen](#variablen-und-datentypen)
+* [Einlesen und Ausgabe](#einlesen-und-ausgabe)
+* [IF-Anweisung](#if-anweisung)
+* [Liste (Arrays)](#liste-arrays)
+* [Schleifen](#schleifen)
+  * [FOR-Schleife](#for-schleife)
+  * [WHILE-Schleife](#while-schleife)
+
+
 ## Einführung
 
 ## Variablen und Datentypen
