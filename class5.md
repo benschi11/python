@@ -150,7 +150,7 @@ for <Variable> in <Liste>:
   <Schleifendurchgang>
 ```
 
-#####Beispiel Obstsalat:
+#### Beispiel Obstsalat:
 ```python
 obstsalat = ["Apfel", "Banane", "Kiwi", "Ananas"]
 for obst in obstsalat:
@@ -171,7 +171,7 @@ b = list(range(1,10)) # generiert eine Liste von 1 bis 9
 c = list(range(1,101)) # generiert eine Liste von 1 bis 100
 ```
 
-#####Beispiel Zählen:
+#### Beispiel Zählen:
 
 ```python
 count = 0
@@ -204,7 +204,7 @@ while eingabe != "J":
 ```
 Diese Schleife wird also so lange ausgeführt, so lange die Bedingung ```eingabe != "J"``` erfüllt ist, also in der Variable ```eingabe``` nicht "J" steht.
 
-Viele Programmiere mögen es nicht, dass im obrigen Beispiel die Zeile 1 und 3 doppelt geschrieben werden müssen. Daher arbeiten viele mit Hilfe eines Tricks: Sie erzeugen eine Endlosschleife und prüfen in jedem Schleifendurchgang händisch ob die Bedingung nicht mehr erfüllt ist - sollte dies der Fall sein wird die Schleife mit `break` verlassen.
+Viele Programmierer mögen es nicht, dass im obrigen Beispiel die Zeile 1 und 3 doppelt geschrieben werden müssen. Daher arbeiten viele mit Hilfe eines Tricks: Sie erzeugen eine Endlosschleife und prüfen in jedem Schleifendurchgang händisch ob die Bedingung nicht mehr erfüllt ist - sollte dies der Fall sein wird die Schleife mit `break` verlassen.
 
 ```python
 for True: # Endlosschleife
