@@ -1,5 +1,9 @@
 # Grafische Oberflächen mit PyQT
 
+## Inhaltsverzeichnis
+
+* [Installation](#installation)
+* [Hello World](#hello-world)
 
 Um grafische Oberflächen zu erstellen gibt es mehrere Möglichkeiten. Wir werden uns in der Schule mit QT genauer mit pyQT beschäftigen.
 ## Installation
