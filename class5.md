@@ -207,7 +207,7 @@ Diese Schleife wird also so lange ausgeführt, so lange die Bedingung ```eingabe
 Viele Programmierer mögen es nicht, dass im obrigen Beispiel die Zeile 1 und 3 doppelt geschrieben werden müssen. Daher arbeiten viele mit Hilfe eines Tricks: Sie erzeugen eine Endlosschleife und prüfen in jedem Schleifendurchgang händisch ob die Bedingung nicht mehr erfüllt ist - sollte dies der Fall sein wird die Schleife mit `break` verlassen.
 
 ```python
-for True: # Endlosschleife
+while True: # Endlosschleife
   eingabe = input("Bitte geben Sie ein 'J' ein:")
   if eingabe == "J":
     break #verlasse die Schleife
