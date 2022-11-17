@@ -8,10 +8,10 @@
 Um grafische Oberflächen zu erstellen gibt es mehrere Möglichkeiten. Wir werden uns in der Schule mit QT genauer mit pyQT beschäftigen.
 ## Installation
 ### Windows
-Der einfachste Weg pyQT 5 unter Windows zu installieren ist über den in Python integrierten Packagemanager `pip`:
+Der einfachste Weg pyQT 6 unter Windows zu installieren ist über den in Python integrierten Packagemanager `pip`:
 
 ```
-pip install pyqt5
+pip install pyqt6
 ```
 
 ### OS X
@@ -26,7 +26,7 @@ brew install pyqt
 Unter einer Ubuntu Distor mit dem Packagemanager `apt-get` wird pyQT folgendermaßen installiert:
 
 ```
-sudo apt-get install python3-pyqt5
+sudo apt-get install python3-pyqt6
 ```
 
 ## Hello World
@@ -37,9 +37,9 @@ Erzeuge eine leere Python Datei und nenne sie `qt-HelloWorld.py`.
 Zuerst müssen wir **alle notwendigen Libraries** importierten:
 ```python
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import pyqtSlot
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel
+from PyQt6.QtGui import QIcon
+from PyQt6.QtCore import pyqtSlot
 ```
 
 Danach definieren wir das Hauptfenster und die ersten Elemente:
