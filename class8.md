@@ -55,5 +55,10 @@ textLabel.move(110,85)
 widget.setGeometry(50,50,320,200)
 widget.setWindowTitle("PyQt5 Example")
 widget.show()
-sys.exit(app.exec_())
+sys.exit(app.exec())
+```
+
+Wir werden die GUIs aber nicht alle händisch programmieren, sondern wir werden dafür den *QT Designer* verwenden. Dieser kann auch wieder über pip installiert werden.
+```
+pip install PyQt5Designer
 ```
