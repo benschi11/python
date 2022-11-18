@@ -16,6 +16,7 @@ pip install pyqt6
 
 ### OS X
 Unter OS X wird das Tool `brew` benötigt.
+*Anmerkung:* Anscheinend funktioniert auch unter OS X die Installation mit `pip` (siehe Windows)
 
 ```
 brew install pyqt
