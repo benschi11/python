@@ -8,4 +8,4 @@
 
 ### [Objektorientierte Programmierung](oop.md)
 
-### [8. Klasse](class8.md#Grafische-Oberflächen-mit-PyQT)
+### [Grafische Oberlfächen](GUI.md)
