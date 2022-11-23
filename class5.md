@@ -123,7 +123,8 @@ else:
 ## Liste (Arrays)
 Eine Liste ist in der Programmierung eine Variable, in der mehrere Werte seperiert voneinander gespeichert werden können.
 Zum Beispiel kann ich eine Variable ```Obst``` erzeugen, die alle Obstsorten gespeichert hat, die ich gerade zuhause habe.
-####Syntax
+
+#### Syntax
 ```python
 obst = ["Orange", "Apfel", "Kiwi"]
 ```
