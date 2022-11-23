@@ -57,3 +57,7 @@ widget.setWindowTitle("PyQt5 Example")
 widget.show()
 sys.exit(app.exec_())
 ```
+## QT Designer
+Um nicht die gesamte GUI händisch per Code erstellen zu müssen, gibt es in PyQT ein nettes Tool - den QT Designer. 
+
+Dieser muss auch installiert werden
