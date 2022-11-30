@@ -1,6 +1,12 @@
 # Objektorientierte Programmierung
 Um Programmierung einfacher und vor allem übersichtlicher und wartbarer zu machen, wurden Klassen und Objekte eingeführt. Diese Programmierung nennt man **objektorientierte Programmierung**.
 
+## Inhaltsverzeichnis
+
+* [Klasse](#klasse)
+* [Objekte](#objekte)
+* [Konstruktor](#konstruktor)
+
 ## Klasse
 Eine Klasse kann man sich wie einen Bauplan vorstellen. Nehmen wir z.B.: ein Auto: ein Auto hat eine Anzahl von Sitzen, eine Farbe, kann beschleunigen, ....
 Alle diese Eigenschaften und Methoden kann man in einer Klasse zusammenfassen.
@@ -104,4 +110,98 @@ blueCar = Car("blue", 5)
 # Erstellt ein weiteres Auto mit der Farbe rot und 3 Türen
 redCar = Car("red", 3)
 ```
+## Methoden
+<mark style="background-color: #FFFF00">TODO: Hier fehlt noch etwas</mark>  
+## Properties
+<mark style="background-color: #FFFF00">TODO: Hier fehlt noch etwas</mark>  
 
+## Dataclasses
+Um nicht immer diese ganzen Properties schreiben zu müssen, gibt es eine sehr nützliche Erweiterung, die sich `DataClasses` nennt. Mit Hilfe dieses Paketes lassen sich Dataklassen viel einfacher implementieren.
+
+Sollte das Paket noch nicht installiert sein, werden wir es mit Hilfe von `pip` installieren. Benutze dazu folgenden Befehl:
+```
+pip install dataclasses
+```
+
+Verlgleichen wir jetzt die beiden Arten: Bis jetzt mussten wir für jede Eigenschaft unserer Klasse in den meisten Fällen zwei Property Functions definieren. Nehmen wir z.B.: eine Klasse `Student` her.
+
+```python
+class student:
+    def __init__(self, prename: str, surname: str) -> None:
+        self.__prename = prename;
+        self.__surname = surname;
+
+    @property
+    def prename(self) -> str:
+        return self.__prename
+    
+    @prename.setter
+    def prename(self, value) -> None:
+        self.__prename = value;
+
+    @property
+    def surname(self) -> str:
+        return self.__surname
+    
+    @surname.setter
+    def surname(self, value) -> None:
+        self.__surname = value;
+    
+    def __repr__(self) -> str:
+        return f"Prename: {self.prename}, Surname: {self.surname}"
+
+## Verwende die Klasse
+
+s1 = student("Benedikt", "Neuhold")
+s2 = student("Gerald", "Geier")
+
+## Ausgabe der Objekte
+print(s1)
+print(s2)
+``` 
+Diese einfache Klasse, die nur Vor- und Nachnamen besitzt benötigt schon einige Zeilen Code. Schauen wir uns diese Klasse nun mit Hilfe der `dataclass` an.
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class student:
+    prename: str
+    surname: str
+
+## Verwende die Klasse
+
+s1 = student("Benedikt", "Neuhold")
+s2 = student("Gerald", "Geier")
+
+## Ausgabe der Objekte
+print(s1)
+print(s2)
+
+```
+
+Es lassen sich zum Beispiel auch Standardwerte definieren oder einzelne Eigenschaften aus dem Konstruktor herausnehmen.
+
+```python
+from dataclasses import dataclass, field
+
+@dataclass
+class student:
+    id : int
+    prename: str
+    surname: str = "Mustermann" # default Wert für surname
+
+
+## Verwende die Klasse
+
+s1 = student(1, "Benedikt", "Neuhold")
+s2 = student(2, "Gerald") # default Wert "Mustermann" wird verwendet.
+
+## Ausgabe der Objekte
+print(s1)
+print(s2)
+```
+
+Weiter Informationen zur `dataclasses` findest du auf deren [Webseite](https://docs.python.org/3/library/dataclasses.html).
+
+## Vererbung
