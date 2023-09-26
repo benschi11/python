@@ -1,6 +1,80 @@
 # Python Kurs - 6. Klasse
 
-## Objektorientierte Programmierung
+## Funktionen
+In vielen Fällen möchte man einen gewissen Codeblock gerne an verschiedenen Stellen wiederverwenden. In diesem Fall eigenen sich Funktionen sehr gut. Eine Funktion kann man sich wie ein Stück Code vorstellen, dass bei Aufruf der Funktion immer wieder durchgeführt wird.
+
+### Funktionen ohne Parameter und Rückgabewert
+
+Das einfachste Beispiel ist eine Trennline. Ich möchte Teile meiner Ausgabe mit Hilfe von Trennzeichen abtrennen. Dafür wird eine Funktion `trennlinie` definieren:
+```python
+def trennlinie():
+  print("-"*20)
+```
+Code der in einer Funktion definiert ist, wird standardmäßig nicht ausgeführt. Die Funktion muss erst mit Hilfe ihres Namens und `()` aufgerufen werden:
+
+```python
+def trennlinie():
+  print("-"*20)
+
+trennlinie()
+print("Ich lerne geraden Funktionen")
+trennlinie()
+```
+<em>**Ausgabe:**</em>
+```
+--------------------
+Ich lerne geraden Funktionen
+--------------------
+```
+
+Man kann es sich jetzt so vorstellen, dass anstatt von `trennlinie()` der Code aus der Funktion `trennlinie` ausgeführt wird. 
+
+Dies hat natürlich den Vorteil, dass wenn ich das Trennzeichen ändern möchte, ich dies nur genau an einer Stelle machen muss.
+Änderung des Trennzeichens auf "#":
+```python
+def trennlinie():
+  print("#"*20)
+
+trennlinie()
+print("Ich lerne geraden Funktionen")
+trennlinie()
+```
+
+<em>**Ausgabe:**</em>
+```
+####################
+Ich lerne geraden Funktionen
+####################
+```
+
+### Funktionen mit Rückgabewert, aber ohne Parameter
+Wir wollen eine Funktion schreiben, welche je nach aktueller Uhrzeit eine Begrüßung zurückgibt. Die Funktion hat den Namen `greeting` und gib der aufrufenden Stelle, in diesem Fall, einen String zurück.
+```python
+from datetime import datetime
+
+# ------------- Beginn der Funktion -----------
+def greeting():
+    current_time = datetime.now()
+
+    if current_time.hour < 9:
+        return "guten Morgen"
+    elif current_time.hour < 12:
+        return "schönen Vormittag"
+    elif current_time.hour < 15:
+        return "guten Mittag"
+    elif current_time.hour < 18:
+        return "schönen Nachmittag"
+    elif current_time.hour < 22:
+        return "schönen Abend"
+    else:
+        return "Gute Nacht"
+# ------------- Ende der Funktion -----------
+    
+name = input("Geben Sie Ihren Namen ein: ")
+begruessung = greeting()
+
+print("Lieber " + name + " ich wünsche " + begruessung)
+```
 
 ## Dateioperationen
 
