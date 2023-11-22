@@ -8,4 +8,4 @@
 
 ### [Objektorientierte Programmierung](oop.md)
 
-### [Grafische Oberlfächen](GUI.md)
+### [Grafische Oberflächen](GUI.md)
