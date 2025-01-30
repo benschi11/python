@@ -205,3 +205,81 @@ print(s2)
 Weiter Informationen zur `dataclasses` findest du auf deren [Webseite](https://docs.python.org/3/library/dataclasses.html).
 
 ## Vererbung
+In allen höheren Programmiersprachen gibt es das Konzept der Vererbung. Dies ist nützlich, damit man bei unterschiedlichen Klassen, die aber viele Gemeinsamkeiten haben, weniger Code schreiben muss.
+Nehmen wir z.B.: die Klasse `Auto` und `Fahrrad`. Beide Klassen gehören zur Überkategorie Fahrzeug und beide haben eine Geschwindigkeit und können `bremsen` und `beschleunigen`.
+
+Daher ist es sinnvoll, dass wir eine 'Basisklasse' erstellen, die alle diese Gemeinsamkeiten abbildet. Nennen wir die Klasse `Fahrzeug`. Sie implementiert alle gemeinsamen Eigenschaften und Methoden. Auserdem stellt sie eine Methode `info` bereit, wo je nach Klasse jeweils die Informationen ausgegeben werden. Hier wird die Funktionsdefinition in der Basisklasse definiere, die implementierung muss aber in der konkreten Klasse erfolgen. Sollte das nicht geschehen, würde zur Laufzeit ein `NotImplementedError` - Fehler auftreten.
+
+```python
+class Fahrzeug:
+    def __init__(self, geschwindigkeit=0):
+        self.geschwindigkeit = geschwindigkeit
+
+    def beschleunigen(self, delta):
+        self.geschwindigkeit += delta
+        print(f"Geschwindigkeit um {delta} erhöht auf {self.geschwindigkeit} km/h")
+
+    def bremsen(self, delta):
+        self.geschwindigkeit -= delta
+        if self.geschwindigkeit < 0:
+            self.geschwindigkeit = 0
+        print(f"Geschwindigkeit um {delta} verringert auf {self.geschwindigkeit} km/h")
+
+    def info(self):
+        raise NotImplementedError("Subklassen müssen diese Methode implementieren")
+```
+
+Schreiben wir nun unsere beiden konkreten Klassen `Fahrrad` und `Auto`.
+
+```python
+# Abgeleitete Klasse (Kindklasse)
+class Auto(Fahrzeug):
+    def __init__(self, geschwindigkeit=0, tankinhalt=50):
+        super().__init__(geschwindigkeit)
+        self.tankinhalt = tankinhalt
+
+    def info(self):
+        return (f"Auto: Geschwindigkeit = {self.geschwindigkeit} km/h, "
+                f"Tankinhalt = {self.tankinhalt} Liter")
+
+    def tanken(self, liter):
+        self.tankinhalt += liter
+        print(f"Getankt! Tankinhalt ist jetzt {self.tankinhalt} Liter")
+```
+
+```python
+    # Abgeleitete Klasse (Kindklasse)
+class Fahrrad(Fahrzeug):
+    def __init__(self, geschwindigkeit=0, reifendruck=2.5):
+        super().__init__(geschwindigkeit)
+        self.reifendruck = reifendruck
+
+    def info(self):
+        return (f"Fahrrad: Geschwindigkeit = {self.geschwindigkeit} km/h, "
+                f"Reifendruck = {self.reifendruck} bar")
+
+    def pumpen(self, bar):
+        self.reifendruck += bar
+        print(f"Reifen aufgepumpt! Reifendruck ist jetzt {self.reifendruck} bar")
+```
+
+Nun können wir Objekte von unseren konkreten Klassen anlegen. Man wird dann sehen, dass diese auch die Methoden `bremsen` und `beschleunigen` aus der Basisklasse besitzen. Zusätzlich verfügen sie aber auch um die eigenen Methoden `tanken` und `pumpen`, die jeweils nur das `Auto` oder das `Fahrrad` besitzt.
+
+```python
+# Objekte erstellen
+auto = Auto(geschwindigkeit=30, tankinhalt=40)
+fahrrad = Fahrrad(geschwindigkeit=15, reifendruck=2.0)
+
+# Methoden aufrufen
+print(auto.anzeigen())  # Ausgabe: Auto: Geschwindigkeit = 30 km/h, Tankinhalt = 40 Liter
+print(fahrrad.anzeigen())  # Ausgabe: Fahrrad: Geschwindigkeit = 15 km/h, Reifendruck = 2.0 bar
+
+auto.beschleunigen(20)  # Ausgabe: Geschwindigkeit erhöht auf 50 km/h
+fahrrad.bremsen(5)  # Ausgabe: Geschwindigkeit verringert auf 10 km/h
+
+auto.tanken(10)  # Ausgabe: Getankt! Tankinhalt ist jetzt 50 Liter
+fahrrad.pumpen(0.5)  # Ausgabe: Reifen aufgepumpt! Reifendruck ist jetzt 2.5 bar
+
+print(auto.anzeigen())  # Ausgabe: Auto: Geschwindigkeit = 50 km/h, Tankinhalt = 50 Liter
+print(fahrrad.anzeigen())  # Ausgabe: Fahrrad: Geschwindigkeit = 10 km/h, Reifendruck = 2.5 bar
+```
